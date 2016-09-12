@@ -13,21 +13,32 @@ import com.hxy.MyService;
 import com.hxy.model.UsersInfo;
 import com.hxy.response.IndexResponse;
 
+import javax.annotation.Resource;
+
 /**
  * Created by houxiaoyu01 on 2016/8/24.
  */
+
 @Controller
 public class MyContoller {
     @Autowired
     private MyService myService;
 
-    @RequestMapping(value = "/index", produces = "application/json")
+    @RequestMapping(value = "/index")
     @ResponseBody
     public IndexResponse index() {
         UsersInfo usersInfo = myService.findAllUsers();
         IndexResponse response = new IndexResponse();
         response.setUserInfo(usersInfo);
-
+        test();
         return response;
     }
+
+
+    @RequestMapping(value = "/forward")
+    private String test() {
+        return "redirect:https://www.baidu.com/";
+    }
+
+
 }

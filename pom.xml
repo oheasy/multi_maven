@@ -159,6 +159,26 @@
       <artifactId>lombok</artifactId>
       <version>1.16.10</version>
     </dependency>
-  </dependencies>
 
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-core-asl</artifactId>
+      <version>1.9.13</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-mapper-asl</artifactId>
+      <version>1.9.13</version>
+    </dependency>
+  </dependencies>
+  <distributionManagement>
+    <repository>
+      <id>nexus-release</id>
+      <url>http://127.0.0.1:8081/nexus/content/repositories/releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>nexus-snapshot</id>
+      <url>http://127.0.0.1:8081/nexus/content/repositories/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
