@@ -3,6 +3,8 @@
  */
 package com.hxy.controller;
 
+import com.hxy.response.StuResponse;
+import com.hxy.response.UserResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.Mapping;
@@ -24,6 +26,12 @@ public class MyContoller {
     @Autowired
     private MyService myService;
 
+    @Autowired
+    private UserResponse userResponse;
+
+    @Autowired
+    private StuResponse stuResponse;
+
     @RequestMapping(value = "/index")
     @ResponseBody
     public IndexResponse index() {
@@ -34,6 +42,17 @@ public class MyContoller {
         return response;
     }
 
+    @RequestMapping(value = "/userResponse")
+    @ResponseBody
+    public UserResponse getUserResponse() {
+        return userResponse;
+    }
+
+    @RequestMapping(value = "/stuResponse")
+    @ResponseBody
+    public StuResponse getStuResponse() {
+        return stuResponse;
+    }
 
     @RequestMapping(value = "/forward")
     private String test() {

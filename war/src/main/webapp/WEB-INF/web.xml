@@ -7,7 +7,12 @@
 
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:config/spring-config.xml</param-value>
+    <!--spring会根据web.xml中的配置，classpath* ,扫描
+    各个jar包下的xml，然后合成一个大的xml ,而classpath，只会扫描到第一个-->
+    <param-value>
+      classpath:config/spring-config.xml,
+      classpath*:META-INF/spring/spring-config.xml
+    </param-value>
   </context-param>
 
   <listener>
