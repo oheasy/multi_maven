@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2016 Baidu, Inc. All Rights Reserved.
- */
 package com.hxy.controller;
 
 import com.hxy.response.StuResponse;
@@ -56,7 +53,7 @@ public class MyContoller {
 
     @RequestMapping(value = "/forward")
     private String test() {
-        return "redirect:https://www.baidu.com/";
+        return "redirect:https://www.163.com/";
     }
 
 

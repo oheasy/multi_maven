@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2016 Baidu, Inc. All Rights Reserved.
- */
 package com.hxy.response;
 
 import org.codehaus.jackson.annotate.JsonProperty;
